@@ -1,0 +1,33 @@
+buildscript{
+    ext{
+        springBootVersion = '2.2.6.RELEASE'
+    } // ext : build.gradle 에서 사용하는 전역 변수를 설정한다.
+    repositories{
+        mavenCentral()
+        jcenter()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
+}//buildScript
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+
+group 'org.james.book'
+version '1.0-SNAPSHOT'
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}//repositories
+
+dependencies {
+    compile('org.springframework.boot:spring-boot-starter-web')
+    testCompile('org.springframework.boot:spring-boot-starter-test')
+}/*
+dependencies : 특정 버전을 명시하지 않아야, ext 에서 선언하고, classpath 로 작성한
+스프링부트의 버전을 따라간다! 주의하자
+*/
