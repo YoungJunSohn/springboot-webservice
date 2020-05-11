@@ -37,11 +37,10 @@ public class PostsRepositoryTest {
                 .build());
 
         List<Posts> postsList = postRepository.findAll();
-
+ 
         Posts posts = postsList.get(0); //첫번째 글을 가져와 초기화한다.
         assertThat(posts.getTitle()).isEqualTo(title);
         assertThat(posts.getContent()).isEqualTo(content);
-
 
     }//postingLoadTest
 }//PostsRepositoryTest
