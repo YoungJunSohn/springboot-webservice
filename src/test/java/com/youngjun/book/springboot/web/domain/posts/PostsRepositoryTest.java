@@ -1,8 +1,6 @@
-package com.youngjun.book.springboot.domain.posts;
+package com.youngjun.book.springboot.web.domain.posts;
 
 
-import com.youngjun.book.springboot.web.domain.posts.PostRepository;
-import com.youngjun.book.springboot.web.domain.posts.Posts;
 import org.junit.After;
 import org.junit.Test;
 import org.junit.runner.RunWith;

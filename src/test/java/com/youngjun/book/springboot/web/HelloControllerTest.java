@@ -1,4 +1,4 @@
-package com.youngjun.book.springboot;
+package com.youngjun.book.springboot.web;
 
 import com.youngjun.book.springboot.web.HelloController;
 import org.junit.Test;
