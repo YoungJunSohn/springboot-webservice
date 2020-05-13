@@ -30,4 +30,11 @@ public class Posts { //실제 DB 테이블과 매칭될 클래스
         this.author = author;
     }//Posts
 
+
+
+    //수정
+    public void update(String title, String content){
+        this.title = title;
+        this.content = content;
+    }//update
 }//Posts
