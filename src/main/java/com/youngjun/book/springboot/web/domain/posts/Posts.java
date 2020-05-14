@@ -1,5 +1,6 @@
 package com.youngjun.book.springboot.web.domain.posts;
 
+import com.youngjun.book.springboot.web.domain.BaseTimeEntity;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -9,7 +10,7 @@ import javax.persistence.*;
 @Getter
 @NoArgsConstructor
 @Entity // Java Persistence Api annotation 를 사용한다.
-public class Posts { //실제 DB 테이블과 매칭될 클래스
+public class Posts extends BaseTimeEntity { //실제 DB 테이블과 매칭될 클래스
 
     @Id //
     @GeneratedValue(strategy = GenerationType.IDENTITY)
