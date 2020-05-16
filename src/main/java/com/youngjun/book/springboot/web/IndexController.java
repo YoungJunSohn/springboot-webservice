@@ -8,6 +8,12 @@ public class IndexController {
     @GetMapping("/")
     public String index(){
 
-        return "/index"; //index 페이지로 보냄
+        return "index"; //index mustache 페이지로 보냄
     }//index()
+
+    @GetMapping("/posts/save")
+    public String postsSave(){
+        return "posts-save";
+    }//postsSave
+
 }//IndexController
