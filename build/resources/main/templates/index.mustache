@@ -1,7 +1,7 @@
 
 {{>layout/header}}
 
-    <h1>날래날래 실행되라우 ㅁ니ㅏㅇ러미낭ㄹ</h1>
+    <h1>아쥬 멋진 웹 서비스 ver.2</h1>
 
     <div class="col-md-12">
         <div class="row">
@@ -10,5 +10,29 @@
             </div>
         </div>
     </div><!--/.col-md-12 글 등록 버튼-->
+    <br/>
+
+    <!-- 게시글 목록 출력 -->
+    <table class="table table-horizontal table-bordered">
+        <thead class="thead-strong">
+            <tr>
+                <th>게시글 번호</th>
+                <th>제목</th>
+                <th>작성자</th>
+                <th>최종 수정일</th>
+            </tr>
+        </thead>
+
+        <tbody id="tbody">
+        {{#posts}} <!--#posts라는 List를 순회하는 mustache문법 , java의 for문과 비슷하다-->
+            <tr>
+                <td>{{id}}</td>
+                <td>{{title}}</td>
+                <td>{{author}}</td>
+                <td>{{modifiedDate}}</td>
+            </tr>
+        {{/posts}}
+        </tbody>
+    </table>
 
 {{>layout/footer}}
