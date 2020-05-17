@@ -27,7 +27,7 @@
         {{#posts}} <!--#posts라는 List를 순회하는 mustache문법 , java의 for문과 비슷하다-->
             <tr>
                 <td>{{id}}</td>
-                <td>{{title}}</td>
+                <td><a href="/posts/update/{{id}}">{{title}}</a></td>
                 <td>{{author}}</td>
                 <td>{{modifiedDate}}</td>
             </tr>
