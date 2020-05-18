@@ -8,6 +8,10 @@ var index = {
         $('#btn-update').on("click", function () {
             _this.update();
         });
+
+        $('#btn-delete').on("click", function () {
+            _this.delete();
+        })
     },//init fn
 
     save : function () {
@@ -50,8 +54,23 @@ var index = {
         }).fail(function (error) {
             alert(JSON.stringify(error));
         })//ajax
-    }//update fn
+    },//update fn
 
+    delete : function () {
+        var id = $('#id').val();
+
+        $.ajax({
+            type : 'DELETE',
+            dataType : 'json',
+            url: '/api/v1/posts/'+id,
+            contentType : 'application/json; charset=utf-8'
+        }).done(function () {
+            alert("삭제되었습니다.")
+            window.location.href = '/';
+        }).fail(function (error) {
+            alert(JSON.stringify(error));
+        })//ajax
+    }//delete fn
 }//main declaration
 
 index.init();
