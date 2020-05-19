@@ -11,7 +11,7 @@ var index = {
 
         $('#btn-delete').on("click", function () {
             _this.delete();
-        })
+        });
     },//init fn
 
     save : function () {

@@ -2,11 +2,21 @@
 {{>layout/header}}
 
     <h1>아쥬 멋진 웹 서비스 ver.2</h1>
-
+    <!-- 로그인 기능 영역 -->
     <div class="col-md-12">
         <div class="row">
             <div class="col-md-6">
                 <a href="/posts/save" role="button" class="btn btn-primary">글 등록</a>
+            {{#userName}}
+                Logged in as : <span id="user">{{username}}</span>
+            <!--스프링 시큐리티에서 기본적으로 제공하는 로그아웃 url(/logout) -->
+                <a href="/logout" class="btn btn-info active" role="button">로그아웃</a>
+            {{/userName}}
+            {{^userName}}
+                <!-- mustache에는 if else가 없는대신, ^를 사용하면 "~가 없을 경우" 를 나타낼 수 있다. -->
+                <a href="/oauth2/authorization/google"
+                   class="btn btn-success active" role="button">Google login</a>
+            {{/userName}}
             </div>
         </div>
     </div><!--/.col-md-12 글 등록 버튼-->
