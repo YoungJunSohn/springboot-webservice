@@ -3,11 +3,16 @@ package com.youngjun.book.springboot.web.service.posts;
 import com.youngjun.book.springboot.web.domain.posts.PostRepository;
 import com.youngjun.book.springboot.web.domain.posts.Posts;
 import com.youngjun.book.springboot.web.dto.PostSaveRequestDto;
+import com.youngjun.book.springboot.web.dto.PostsListResponseDto;
 import com.youngjun.book.springboot.web.dto.PostsResponseDto;
 import com.youngjun.book.springboot.web.dto.PostsUpdateRequestDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import java.util.List;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
 
 
 @RequiredArgsConstructor
@@ -15,6 +20,14 @@ import org.springframework.transaction.annotation.Transactional;
 public class PostService {
 
     private final PostRepository postRepository;
+
+    @Transactional //목록 조회
+    public List<PostsListResponseDto> findAllDesc(){
+        return postRepository.findAllDesc()
+                .stream()
+                .map(PostsListResponseDto::new)
+                .collect(Collectors.toList());
+    }//findAllDesc
 
     @Transactional
     public Long save(PostSaveRequestDto requestDto) {
@@ -31,6 +44,14 @@ public class PostService {
 
         return id;
     }//update
+
+    @Transactional
+    public void delete(Long id){
+        Posts posts = postRepository.findById(id)
+                .orElseThrow(()->new IllegalArgumentException("해당 게시글이 없습니다! id="+id));
+
+        postRepository.delete(posts);
+    }//delete
 
     public PostsResponseDto findById(Long id){
         Posts entity = postRepository.findById(id)
