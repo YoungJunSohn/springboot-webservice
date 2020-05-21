@@ -32,6 +32,8 @@ dependencies {
     compile('org.springframework.boot:spring-boot-starter-data-jpa')
     compile('org.springframework.boot:spring-boot-starter-mustache')
     compile('org.springframework.boot:spring-boot-starter-oauth2-client')
+    compile('org.springframework.session:spring-session-jdbc')
+    testCompile("org.springframework.security:spring-security-test")
 }/*
 dependencies : 특정 버전을 명시하지 않아야, ext 에서 선언하고, classpath 로 작성한
 스프링부트의 버전을 따라간다! 주의하자
