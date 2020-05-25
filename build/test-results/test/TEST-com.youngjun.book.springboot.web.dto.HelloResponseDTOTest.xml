@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< Updated upstream
 <testsuite name="com.youngjun.book.springboot.web.dto.HelloResponseDTOTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-05-22T08:46:06" hostname="DESKTOP-U1VS4JN" time="0.005">
+=======
+<testsuite name="com.youngjun.book.springboot.web.dto.HelloResponseDTOTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-05-25T08:04:05" hostname="DESKTOP-U1VS4JN" time="0.005">
+>>>>>>> Stashed changes
   <properties/>
   <testcase name="lombokTest" classname="com.youngjun.book.springboot.web.dto.HelloResponseDTOTest" time="0.005"/>
   <system-out><![CDATA[]]></system-out>
