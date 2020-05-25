@@ -1,3 +1,4 @@
+/*
 package com.youngjun.book.springboot.web;
 
 import org.junit.Test;
@@ -26,3 +27,4 @@ public class IndexControllerTest {
         assertThat(body).contains("스프링 부트 웹서비스");
     };
 }//IndexControllerTest
+*/
