@@ -23,11 +23,19 @@ script: "./gradlew clean build"
 
 #빌드시 만들어지는 jar 파일을 S3와 연동
 before_deploy:
-  - zip -r tuninghour-springboot-webservice * #현재 위치의 모든파일(*) 을 springboot-webservice 이름으로 압축
-  - mkdir -p deploy #Travis CI가 실행중인 위치에서 deploy 디렉토리 생성
-  - mv tuninghour-springboot-webservice.zip deploy/tuninghour-springboot-webservice.zip #압축파일을 deploy 디렉토리 하위로 이동
+#  - zip -r tuninghour-springboot-webservice * #현재 위치의 모든파일(*) 을 springboot-webservice 이름으로 압축
+#  - mkdir -p deploy #Travis CI가 실행중인 위치에서 deploy 디렉토리 생성
+#  - mv tuninghour-springboot-webservice.zip deploy/tuninghour-springboot-webservice.zip #압축파일을 deploy 디렉토리 하위로 이동
+  - mkdir -p before-deploy #zip에 포함시킬 파일들을 보관할 디렉토리 생성
+  - cp scripts/*.sh before-deploy/
+  - cp appspec.yml before-deploy/
+  - cp build/libs/*.jar before-deploy/
+  - cd before-deploy && zip -r before-deploy #before-deploy 디렉토리로 이동 후 전체압축
+  - cd ../ && mkdir -p deploy #상위 디렉토리로 이동 후 deploy 디렉토리 생성
+  - mv before-deploy/before-deploy.zip deploy/tuninghour-springboot-webservice #deploy로 zip 파일 이동
 
 deploy:
+#S3 setting
   - provider: s3
     access_key_id: $AWS_ACCESS_KEY #travis repo setting에 설정되어있는 key 값
     secret_access_key: $AWS_SECRET_KEY #travis repo setting에 설정되어있는 secret값
@@ -38,6 +46,7 @@ deploy:
     local_dir: deploy #before_deploy  에서 생성한 디렉토리
     wait-until-deployed: true
 
+#CodeDeploySetting
   - provider: codedeploy
     access_key_id: $AWS_ACCESS_KEY
     secret_access_key: $AWS_SECRET_KEY
@@ -48,7 +57,8 @@ deploy:
     deployment_group: tuninghour-springboot-webservice-group #배포 그룹
     region: ap-northeast-2
     wait-until-deployed: true
-
+#Codedeploy 오류 : error code 없음 -> 원인 : S3 build group 에 이름이 잘못 등록되어있었기 때문
+#해결 : 불필요한 build 파일 삭제 후 파일명오타 수정
 
 
 
