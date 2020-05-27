@@ -42,7 +42,7 @@ deploy:
     access_key_id : $AWS_ACCESS_KEY
     secret_access_key: $AWS_SECRET_KEY
     bucket : tuninghour-springboot-build #연결할 S3 버킷 명
-    key : tuninghour-springboot-webservice.zip #빌드 파일을 압축해서 전달
+    key : springboot-webservice.zip #빌드 파일을 압축해서 전달
     bundle_type : zip #압축 확장자(다른 형식 지정도 가능)
     application : tuninghour-springboot-webservice #웹 콘솔에서 등록한 CodeDeploy application
     deployment_group : tuninghour-springboot-webservice-group #배포 그룹
