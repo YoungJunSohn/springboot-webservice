@@ -23,9 +23,9 @@ script: "./gradlew clean build"
 
 #빌드시 만들어지는 jar 파일을 S3와 연동
 before_deploy:
-  - zip -r springboot-webservice * #현재 위치의 모든파일(*) 을 springboot-webservice 이름으로 압축
+  - zip -r tuninghour-springboot-webservice * #현재 위치의 모든파일(*) 을 springboot-webservice 이름으로 압축
   - mkdir -p deploy #Travis CI가 실행중인 위치에서 deploy 디렉토리 생성
-  - mv springboot-webservice.zip deploy/springboot-webservice.zip #압축파일을 deploy 디렉토리 하위로 이동
+  - mv tuninghour-springboot-webservice.zip deploy/tuninghour-springboot-webservice.zip #압축파일을 deploy 디렉토리 하위로 이동
 
 deploy:
   - provider: s3
