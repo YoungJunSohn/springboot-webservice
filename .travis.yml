@@ -7,6 +7,10 @@ branches: #Travis CI를 어느 branch 가 푸시될 때 수행할 것인지 지�
   only:
     - master
 
+#before_install : 프로젝트 내 gradlew 파일 실행권한 부여
+before_install:
+  - chmod +x gradlew
+
 # Travis CI 서버의 Home
 cache :
   directories:
