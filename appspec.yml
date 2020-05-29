@@ -4,11 +4,13 @@ files:
   - source: / #CodeDeploy 에서 전달해 준 파일 중 destination으로 이동 시킬 대상을 지정
     destination: /home/ec2-user/app/step2/zip/ #source 옵션에서 지정된 파일을 받을 위치
     overwrite: yes #기존에 파일이 있는 경우, 같은 이름의 파일이 옮겨질 경우 덮어쓰기 적용
+
 permissions:
   - object: /
     pattern: "**"
     owner: ec2-user
     group: ec2-user
+
 hooks:
   ApplicationStart:
     - location: deploy.sh
