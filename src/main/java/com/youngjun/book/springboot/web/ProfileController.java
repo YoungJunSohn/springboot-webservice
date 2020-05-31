@@ -15,7 +15,10 @@ public class ProfileController {
 
     @GetMapping("/profile")
     public String profile(){
+        //현재 실행중인 ActiveProfile 을 모두 가져온다
+        //real, oauth, real-db 등 설정 파일들이 모두 활성화되어 있다면 acvice에 3개가 모두 담겨있다.
         List<String> profiles = Arrays.asList(env.getActiveProfiles());
+
         List<String> realProfiles = Arrays.asList("real", "real1", "real2");
         String defaultProfile = profiles.isEmpty() ? "default" : profiles.get(0);
 
