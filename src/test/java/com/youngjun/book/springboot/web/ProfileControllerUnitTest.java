@@ -9,7 +9,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class ProfileControllerUnitTest {
 
     @Test
-    public void real_profile_inquiry(){
+    public void real_profile이_조회된다(){
         //given
         String expectedProfile = "real";
         MockEnvironment env = new MockEnvironment();
@@ -24,16 +24,17 @@ public class ProfileControllerUnitTest {
 
         //then
         assertThat(profile).isEqualTo(expectedProfile);
-    }//real_profile_inquiry()
+    }//real_profile이_조회된다
 
 
 
 
     @Test
-    public void if_realfile_doesnot_exist(){
+    public void if_realfile이_없으면_첫번째가_조회된다(){
         //given
         String expectedProfile = "oauth";
         MockEnvironment env = new MockEnvironment();
+
         env.addActiveProfile(expectedProfile);
         env.addActiveProfile("real-db");
 
@@ -45,11 +46,11 @@ public class ProfileControllerUnitTest {
         //then
         assertThat(profile).isEqualTo(expectedProfile);
 
-    }//if_realfile_doesnot_exist
+    }//if_realfile이_없으면_첫번째가_조회된다
 
 
     @Test
-    public void if_active_profile_doesnot_exist(){
+    public void if_active_profile이_없으면_default가_조회된다(){
         //given
         String expectedProfile = "default";
         MockEnvironment env = new MockEnvironment();
@@ -60,5 +61,5 @@ public class ProfileControllerUnitTest {
 
         //then
         assertThat(profile).isEqualTo(expectedProfile);
-    }//if_active_profile_doesnot_exist
+    }//if_active_profile이_없으면_default가_조회된다
 }//ProfileControllerTest
