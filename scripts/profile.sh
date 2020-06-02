@@ -29,9 +29,9 @@ function find_idle_port()
 
     if  [ ${IDLE_PROFILE} == real1 ]
     then
-      echo "현재 프로젝트를 실행하고 있지 않은 port : 8081"
+      echo "8081"
     else
-      echo "현재 프로젝트를 실행하고 있지 않은 port : 8082"
+      echo "8082"
     fi
 }
 #bash 는 값은 리턴하는 기능이 없다. 따라서 제일 마지막 줄에 echo로 결과를 출력한 후,
