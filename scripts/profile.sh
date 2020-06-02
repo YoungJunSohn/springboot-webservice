@@ -3,7 +3,7 @@
 #실행되지 않은 profile 찾기 : real1이 사용중인 경우 , real2가 실행되지 않고 있음
 function find_idle_profile()
 {
-    RESPONSE_CODE=$curl -s -o /devnull -w "%{http_code}" http://localhost/profile)
+    RESPONSE_CODE=$(curl -s -o /dev/null -w "%{http_code}" http://localhost/profile)
 
     if [ ${RESPONSE_CODE} -ge 400 ] #400보다 큰 숫자의 에러 검출 (40x, 50x 모두 포함)
     then
