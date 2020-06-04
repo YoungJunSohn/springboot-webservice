@@ -19,9 +19,11 @@ function find_idle_profile()
 
     if [ ${CURRENT_PROFILE} == real1 ] #CURRENT_PROFILE : 현재 스프링부트가 실행 중인 profile
     then
-      IDLE_PROFILE=real2 #CURRNET_PROFILE==real1 -> real1 이 사용중이며, real2는 비어 있다.
+      #CURRNET_PROFILE - real1 -> real1 이 사용중이며, real2는 비어 있다.
+      IDLE_PROFILE=real2
     else
-      IDLE_PROFILE=real1 #CURRENT_PROFILE!=real1 -> real2 가 사용중이며, real1이 비어 있다.
+      #CURRENT_PROFILE - real1 -> real2 가 사용중이며, real1이 비어 있다.
+      IDLE_PROFILE=real1
     fi
 
     echo "${IDLE_PROFILE}" #IDLE_PROFILE : Nginx와 연결되지 않은(비어있는) profile, 이를 받아 스프링부트를 실행할 것
