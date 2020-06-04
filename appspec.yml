@@ -17,7 +17,7 @@ hooks:
       timeout: 60
       runas: ec2-user
   ApplicationStart: #Nginx 와 연결되어 있지 않은 port로 새 버전의 스프링부트 시작
-    - location: deploy.sh
+    - location: start.sh
       timeout: 60
       runas: ec2-user
   ValidateService:
