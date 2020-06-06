@@ -2,7 +2,7 @@ version: 0.0 #CodeDeploy 버전 (다른 버전을 사용 할 경우 오류 발�
 os: linux
 files:
   - source: / #CodeDeploy 에서 전달해 준 파일 중 destination으로 이동 시킬 대상을 지정
-    destination: /home/ec2-user/app/step3/zip/ #source 옵션에서 지정된 파일을 받을 위치
+    destination: /home/ec2-user/app/step2/zip/ #source 옵션에서 지정된 파일을 받을 위치
     overwrite: yes #기존에 파일이 있는 경우, 같은 이름의 파일이 옮겨질 경우 덮어쓰기 적용
 
 permissions:
@@ -12,15 +12,15 @@ permissions:
     group: ec2-user
 
 hooks:
-  AfterInstall:
-    - location: stop.sh #Nginx 와 연결되어 있지 않은 스프링부트를 종료
-      timeout: 60
-      runas: ec2-user
+#  AfterInstall:
+#    - location: stop.sh #Nginx 와 연결되어 있지 않은 스프링부트를 종료
+#      timeout: 60
+#      runas: ec2-user
   ApplicationStart: #Nginx 와 연결되어 있지 않은 port로 새 버전의 스프링부트 시작
-    - location: start.sh
+    - location: deploy.sh
       timeout: 60
       runas: ec2-user
-  ValidateService:
-    - location: health.sh #새 스프링부트가 정상적으로 실행되었는가 확인
-      timeout: 60
-      runas: ec2-user
+#  ValidateService:
+#    - location: health.sh #새 스프링부트가 정상적으로 실행되었는가 확인
+#      timeout: 60
+#      runas: ec2-user
