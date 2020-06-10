@@ -206,13 +206,13 @@
 	}
 
 	sub {
-		font-size: 0.8em;
+		font-size: 0.7em;
 		position: relative;
 		top: 0.5em;
 	}
 
 	sup {
-		font-size: 0.8em;
+		font-size: 0.7em;
 		position: relative;
 		top: -0.5em;
 	}
@@ -1052,6 +1052,11 @@
 		border-radius: 4px;
 		text-align: center;
 	}
+	.item p{
+		text-align: left;
+		text-indent: 1em;
+		font-size: 0.9em;
+	}
 
 		.item header {
 			border-top-left-radius: 4px;
@@ -1356,9 +1361,8 @@
 		}
 
 		#header.alt {
-			height: 20em;
-			min-height: 20em;
-			min-height: 75vh;
+			height: 14em;
+			min-height: 17em;
 		}
 
 			#header.alt:before {
@@ -1386,8 +1390,8 @@
 				text-transform: uppercase;
 				letter-spacing: 0.325rem;
 				font-weight: 400;
-				font-size: 0.8em;
-				padding: 0 1.25em;
+				font-size: 0.7em;
+				padding: 0 1em;
 			}
 
 			#header.alt .inner {
@@ -1437,6 +1441,23 @@
 		}
 
 /* Main */
+	.main-nav {
+		width: 100%;
+		height: 100%;
+		background-color: #fff;
+
+		box-shadow: 0 3px 8px 0px rgba(0,0,0,0.05);
+		-moz-box-shadow: 0 3px 8px 0px rgba(0,0,0,0.05);
+		-webkit-box-shadow: 0 3px 8px 0px rgba(0,0,0,0.05);
+		-o-box-shadow: 0 3px 8px 0px rgba(0,0,0,0.05);
+		-ms-box-shadow: 0 3px 8px 0px rgba(0,0,0,0.05);
+
+		-webkit-transform: translateY(0%);
+		-moz-transform: translateY(0%);
+		-ms-transform: translateY(0%);
+		-o-transform: translateY(0%);
+		transform: translateY(0%);
+	}
 
 	#main {
 		padding: 4em 4em 2em 4em;
