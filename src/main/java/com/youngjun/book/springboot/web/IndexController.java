@@ -32,7 +32,7 @@ public class IndexController {
             model.addAttribute("userName", user.getName());
         }//if
 
-        return "index"; //index mustache 페이지로 보냄
+        return "main"; //main mustache 페이지로 보냄
     }//index()
 
     @GetMapping("/posts/save")
