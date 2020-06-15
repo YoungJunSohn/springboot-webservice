@@ -1,0 +1,42 @@
+{{>layout/real-header}}
+
+<div class="row">
+    <div class="button-form_keun">
+        {{#userName}}
+            Logged in as: <span id="user">{{userName}}</span>
+            <a href="/logout" class="btn btn-info active" role="button">Logout</a>
+        {{/userName}}
+        {{^userName}}
+            <a href="/oauth2/authorization/google" class="btn-google_keun btn btn-danger active" role="button">
+                <i class="fab fa-google"></i>구글 로그인</a>
+<!--            <a href="/oauth2/authorization/naver" class="btn btn-success active" role="button">네이버 로그인</a>-->
+        {{/userName}}
+        <a href="/posts/save" role="button" class="btn btn-success">글 등록</a>
+
+    </div>
+</div>
+<section class="bg0 p-t-70 p-tb-70">
+    <div class="container">
+        <div class="band">
+
+            {{#posts}}
+                <div class="item-2">
+                    <a href="/posts/update/{{id}}" class="card">
+                        <div class="thumb" style="background-image: url(/images/app/cargBg0{{id}}.jpg);"></div>
+                        <article>
+                            <h1>{{title}}</h1>
+                            <p>
+                                {{content}}
+                            </p>
+                            <span>{{author}}</span>
+                            <span>{{modifiedDate}}</span>
+                        </article>
+                    </a>
+                </div>
+            {{/posts}}
+
+        </div>
+    </div>
+</section>
+
+{{>layout/real-footer}}

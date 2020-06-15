@@ -1,30 +1,20 @@
-{{>layout/header}}
+{{>layout/real-header}}
 
-<h1>게시글 등록</h1>
+<div class="contact-w3">
 
-<div class="col-md-12">
-    <div class="col-md-4">
-        <form>
-            <div class="form-group">
-                <label for="title">제목</label>
-                <input type="text" class="form-control" id="title" placeholder="제목을 입력하세요"/>
-            </div><!--/.제목-->
+    <form>
+        <label for="title">제목</label>
+        <input type="text"  id="title" placeholder="제목을 입력하세요">
+        <div class="row"></div>
+        <label for="author">작성자</label>
+        <input type="text" id="author" placeholder="작성자를 입력하세요" >
+        <div class="row1">
+            <label>내용 </label>
+            <textarea id="content" placeholder="내용을 입력하세요"></textarea>
+        </div>
+        <a href="/list" role="button" class="btn btn-secondary">취소</a>
+        <button type="button" class="btn btn-success" id="btn-save">등록</button>
+    </form>
+</div>
 
-            <div>
-                <label for="author">작성자</label>
-                <input type="text" class="form-control" id="author" placeholder="작성자를 입력하세요"/>
-            </div><!--/.작성자-->
-
-            <div>
-                <label for="content">내용</label>
-                <input type="text" class="form-control" id="content" placeholder="내용을 입력하세요"/>
-            </div><!--/.내용-->
-
-        </form>
-
-        <a href="/" role="button" class="btn btn-secondary">취소</a>
-        <button type="button" class="btn btn-primary" id="btn-save">등록</button>
-    </div><!--/.col-md-4-->
-</div><!--/.col-md-12-->
-
-{{>layout/footer}}
+{{>layout/real-footer}}
