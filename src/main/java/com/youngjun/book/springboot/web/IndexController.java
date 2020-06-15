@@ -21,7 +21,18 @@ public class IndexController {
 
 
     @GetMapping("/")
-    public String index(Model model, @LoginUser SessionUser user){ //유저정보 세션으로 받아옴
+    public String main(){
+        return "main";
+    }//main
+
+    @GetMapping("/posts")
+    public String posts(@LoginUser SessionUser user){
+        return "main-detail";
+    }
+
+    //게시판으로
+    @GetMapping("/board")
+    public String board(Model model, @LoginUser SessionUser user){ //유저정보 세션으로 받아옴
 
         model.addAttribute("posts", postService.findAllDesc()); //게시글 출력
 
@@ -32,9 +43,10 @@ public class IndexController {
             model.addAttribute("userName", user.getName());
         }//if
 
-        return "main"; //main mustache 페이지로 보냄
+        return "board";
     }//index()
 
+    //글 등록 화면으로
     @GetMapping("/posts/save")
     public String postsSave(){
         return "posts-save";
