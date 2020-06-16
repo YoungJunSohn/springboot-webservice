@@ -1659,22 +1659,22 @@ a.breadcrumb-item:hover {
 
 }
 
-.button-custom_keun {
+.button-custom_sohn {
     background-color: rgb(200, 35, 4);
     border-radius: 2px;
     cursor: pointer;
     margin-left: 735px;
 
 }
-.button-custom_keun:hover {
-    background-color:  rgba(200,35,4, 90%);
+.button-custom_sohn:hover {
+    background-color:  rgba(200,35,4,0.9);
 }
 
-.button-custom_keun a{
+.button-custom_sohn a{
     color: #fff;
     text-indent: -15px;
 }
-.button-custom_keun a:hover{
+.button-custom_sohn a:hover{
     color: #fff;
 
 }
@@ -1683,11 +1683,42 @@ a.breadcrumb-item:hover {
     margin-top:12px;
 }
 
-.postion_keun{
+.postion_sohn{
     margin-top:190px;
     margin-left: 50px;
 }
 
-.btn-bg_keun{
+.btn-bg_sohn{
     background-color: rgb(23, 185, 120);
+}
+
+.btn-danger-sohn{
+    background-color: #ff5810;
+}
+.btn-danger-sohn:hover{
+    background-color: #bd4410;
+}
+.btn-success-sohn{
+    background-color: #00cd38;
+}
+.btn-success-sohn:hover{
+    background-color: #008e26;
+}
+.btn-sohn{
+    text-decoration: none;
+    text-align: center;
+    color: #fff;
+}
+.btn-sohn:hover{
+    color:#fff;
+}
+.googleMark{
+    font-size: 8px;
+}
+#buttonBox{
+    position:absolute;
+    max-width: 500px;
+    /*background-color: #00b5e9;*/
+    margin-left:50%;
+    left:-166px;
 }

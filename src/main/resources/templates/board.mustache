@@ -1,15 +1,16 @@
 {{>layout/real-header}}
 
-<div class="row">
-    <div class="button-form_keun">
+<div class="row" id="buttonBox">
+    <div class="button-form_sohn">
         {{#userName}}
-            Logged in as: <span id="user">{{userName}}</span>
+            <span id="user">{{userName}} 님 환영합니다!</span>
             <a href="/logout" class="btn btn-info active" role="button">Logout</a>
         {{/userName}}
         {{^userName}}
-            <a href="/oauth2/authorization/google" class="btn-google_keun btn btn-danger active" role="button">
-                <i class="fab fa-google"></i>구글 로그인</a>
-<!--            <a href="/oauth2/authorization/naver" class="btn btn-success active" role="button">네이버 로그인</a>-->
+            <a href="/oauth2/authorization/google" class="btn-google_sohn btn-sohn btn btn-danger-sohn active" role="button">
+                <i class="fab fa-google googleMark"></i> 구글 로그인</a>
+            <a href="/oauth2/authorization/naver" class="btn btn-sohn btn-success-sohn active" role="button">
+               <img src="/images/app/naverShortcut.png"> 네이버 로그인</a>
         {{/userName}}
         <a href="/posts/save" role="button" class="btn btn-success">글 등록</a>
 
