@@ -17,10 +17,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .and().authorizeRequests() //URL 별로 권한관리 설정을 하는 옵션 시작점(선언후 antMatcher 사용가능)
                 .antMatchers("/", "/css/**", "/images/**","/board","/posts",
                         "/js/**", "/h2-console/**","/profile", "/assets/**", "/fonts/**").permitAll()
-                .antMatchers("/api/v1/**")
-                .hasRole(Role.USER.name())
-                .anyRequest().authenticated()
-                .and().logout().logoutSuccessUrl("/") //로그아웃시 해당 주소 "/" 로 이동
+                .antMatchers("/api/v1/**").hasRole(Role.USER.name()).anyRequest().authenticated()
+                .and().logout().logoutSuccessUrl("/board") //로그아웃시 해당 주소 "/board" 로 이동
                 .and().oauth2Login().userInfoEndpoint()
                 .userService(customOAuth2UserService);
     }//configure

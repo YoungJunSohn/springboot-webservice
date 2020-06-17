@@ -101,7 +101,7 @@
 .show-btn-back-to-top {bottom: 0;}
 
 .topbar {
-    background-color: #111;
+    background-color: #183153;
 }
 
 .content-topbar {
@@ -1321,7 +1321,7 @@ a.breadcrumb-item:hover {
 .bg-none {background-color: transparent;}
 .bg0 {background-color: #fff;}
 .bg1 {background-color: #111;}
-.bg2 {background-color: #222;}
+.bg2 {background-color: #183153;}
 .bg3 {background-color: #333;}
 .bg4 {background-color: #444;}
 .bg5 {background-color: #555;}
@@ -1659,22 +1659,22 @@ a.breadcrumb-item:hover {
 
 }
 
-.button-custom_keun {
+.button-custom_sohn {
     background-color: rgb(200, 35, 4);
     border-radius: 2px;
     cursor: pointer;
     margin-left: 735px;
 
 }
-.button-custom_keun:hover {
-    background-color:  rgba(200,35,4, 90%);
+.button-custom_sohn:hover {
+    background-color:  rgba(200,35,4,0.9);
 }
 
-.button-custom_keun a{
+.button-custom_sohn a{
     color: #fff;
     text-indent: -15px;
 }
-.button-custom_keun a:hover{
+.button-custom_sohn a:hover{
     color: #fff;
 
 }
@@ -1683,11 +1683,62 @@ a.breadcrumb-item:hover {
     margin-top:12px;
 }
 
-.postion_keun{
+.postion_sohn{
     margin-top:190px;
     margin-left: 50px;
 }
 
-.btn-bg_keun{
-    background-color: rgb(23, 185, 120);
+.btn-bg_sohn{
+    background-color: #183153;
+}
+
+.btn-danger-sohn{
+    width: 120px;
+    margin-right: 20px;
+    background-color: #ff5810;
+}
+.btn-danger-sohn:hover{
+    background-color: #bd4410;
+}
+.btn-success-sohn{
+    width: 140px;
+    background-color: #00cd38;
+}
+.btn-success-sohn:hover{
+    background-color: #008e26;
+}
+.btn-sohn{
+    margin:auto;
+    text-decoration: none;
+    text-align: center;
+    color: #fff;
+}
+.btn-sohn:hover{
+    color:#fff;
+}
+.googleMark{
+    font-size: 8px;
+}
+#buttonBox{
+    position:absolute;
+    width:280px;
+    /*background-color: #00b5e9;*/
+    margin-left:50%;
+    left:-140px;
+}
+#footer{
+    width: 100%;
+    position: absolute;
+    margin-top:85px;
+}
+#plz-login{
+    width:500px;
+    margin-top:50px;
+    margin-left:37%;
+    text-align: center;
+    font-size: 35px;
+    /*background-color: #00b5e9;*/
+}
+.band{
+    padding-top:35px;
 }
