@@ -246,6 +246,8 @@
             setInterval(function(){
                 $(slideTxt).find('.slide100-txt-item.ab-t-l.' + animOut).remove();
                 $(slideTxt).find('.slide100-txt-item').addClass('ab-t-l ' + animOut);
+                //클래스(al-t-l) 공백없을경우 remove 작동하지 않음
+                
 
 
                 if(count >= data.length-1) {

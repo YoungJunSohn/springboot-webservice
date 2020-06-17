@@ -31,7 +31,8 @@ var index = {
             alert('글이 등록되었습니다.');
             window.location.href = '/board';
         }).fail(function (error) {
-            alert(JSON.stringify(error));
+            alert("에러!");
+            console.log(JSON.stringify(error));
         });//ajax
     },//save fn
 
@@ -52,7 +53,8 @@ var index = {
             alert("글이 수정되었습니다.");
             window.location.href = '/board';
         }).fail(function (error) {
-            alert(JSON.stringify(error));
+            alert("에러!");
+            console.log(JSON.stringify(error));
         })//ajax
     },//update fn
 
@@ -68,7 +70,8 @@ var index = {
             alert("삭제되었습니다.")
             window.location.href = '/board';
         }).fail(function (error) {
-            alert(JSON.stringify(error));
+            alert("에러!");
+            console.log(JSON.stringify(error));
         })//ajax
     }//delete fn
 }//main declaration
