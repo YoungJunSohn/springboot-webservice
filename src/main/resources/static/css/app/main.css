@@ -101,7 +101,7 @@
 .show-btn-back-to-top {bottom: 0;}
 
 .topbar {
-    background-color: #111;
+    background-color: #183153;
 }
 
 .content-topbar {
@@ -1321,7 +1321,7 @@ a.breadcrumb-item:hover {
 .bg-none {background-color: transparent;}
 .bg0 {background-color: #fff;}
 .bg1 {background-color: #111;}
-.bg2 {background-color: #222;}
+.bg2 {background-color: #183153;}
 .bg3 {background-color: #333;}
 .bg4 {background-color: #444;}
 .bg5 {background-color: #555;}
@@ -1689,22 +1689,26 @@ a.breadcrumb-item:hover {
 }
 
 .btn-bg_sohn{
-    background-color: rgb(23, 185, 120);
+    background-color: #183153;
 }
 
 .btn-danger-sohn{
+    width: 120px;
+    margin-right: 20px;
     background-color: #ff5810;
 }
 .btn-danger-sohn:hover{
     background-color: #bd4410;
 }
 .btn-success-sohn{
+    width: 140px;
     background-color: #00cd38;
 }
 .btn-success-sohn:hover{
     background-color: #008e26;
 }
 .btn-sohn{
+    margin:auto;
     text-decoration: none;
     text-align: center;
     color: #fff;
@@ -1717,8 +1721,24 @@ a.breadcrumb-item:hover {
 }
 #buttonBox{
     position:absolute;
-    max-width: 500px;
+    width:280px;
     /*background-color: #00b5e9;*/
     margin-left:50%;
-    left:-166px;
+    left:-140px;
+}
+#footer{
+    width: 100%;
+    position: absolute;
+    margin-top:85px;
+}
+#plz-login{
+    width:500px;
+    margin-top:50px;
+    margin-left:37%;
+    text-align: center;
+    font-size: 35px;
+    /*background-color: #00b5e9;*/
+}
+.band{
+    padding-top:35px;
 }
