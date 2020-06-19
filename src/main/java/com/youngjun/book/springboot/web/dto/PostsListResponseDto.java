@@ -32,6 +32,8 @@ public class PostsListResponseDto {
             this.bgNum = "0"+entity.getBgNum().toString();
         }else if(entity.getBgNum()==10){
             this.bgNum = ""+entity.getBgNum();
+        }else if(entity.getBgNum().equals(null)){
+            this.bgNum = ""+Math.floor(Math.random()*10+1)+"";
         }
 
 
