@@ -1,0 +1,47 @@
+{{>layout/real-header}}
+
+<div class="row" id="buttonBox">
+    <div class="button-form_sohn">
+        {{#userName}}
+            <span id="user">{{userName}}님</span>
+            <a href="/logout" class="btn btn-info active" role="button">Logout</a>
+            <a href="/posts/save" role="button" class="btn btn-success">글 등록</a>
+        {{/userName}}
+        {{^userName}}
+            <div>
+                <a href="/oauth2/authorization/google" class="btn-google_sohn btn-sohn btn btn-danger-sohn active" role="button">
+                    <i class="fab fa-google googleMark"></i> 구글 로그인</a>
+                &nbsp
+                <a href="/oauth2/authorization/naver" class="btn btn-sohn btn-success-sohn active" role="button">
+                    <img src="/images/app/naverShortcut.png"> 네이버 로그인</a>
+            </div>
+        {{/userName}}
+    </div>
+</div>
+<section id="section" class="bg0 p-t-70 p-tb-70">
+    {{^userName}}
+        <h3 id="plz-login">로그인 후 글쓰기가 가능합니다</h3>
+    {{/userName}}
+    <div class="container">
+        <div class="band">
+            {{#posts}}
+                <div class="item-2">
+                    <a href="/posts/update/{{id}}" class="card">
+                        <div class="thumb" style="background-image: url(/images/app/cargBg{{bgNum}}.jpg);"></div>
+                        <article>
+                            <h1>{{title}}</h1>
+                            <p>
+                                {{content}}
+                            </p>
+                            <span>{{author}}</span>
+                            <span>{{modifiedDate}}</span>
+                        </article>
+                    </a>
+                </div>
+            {{/posts}}
+
+        </div>
+    </div>
+</section>
+
+{{>layout/real-footer}}

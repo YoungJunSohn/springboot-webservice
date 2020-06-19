@@ -59,12 +59,15 @@ public class OAuthAttributes {
                 .name(name)
                 .email(email)
                 .picture(picture)
-                .role(Role.GUEST)
+//                .role(Role.GUEST)
+                .role(Role.USER)
                 .build();
     }//toEntity User 엔티티를 생성한다
     /*
     *  OAuthAttributes에서 엔티티를 생성하는 시점은 처음 가입했을 때인데,
     * 가입할 때 기본 권한을 GUEST로 주기 위해서 role 빌더값에는 Role.GUEST를 사용한다.
+    *
+    * 6/17 로그인 하면 글을 쓸수 있도록 기본 권한 USER 로 변경
     * */
 
 

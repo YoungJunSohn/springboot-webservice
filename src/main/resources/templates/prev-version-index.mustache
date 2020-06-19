@@ -1,0 +1,122 @@
+{{>layout/real-header}}
+
+<div id="wrapper">
+    <!-- Main -->
+    <section id="main" class="main">
+        <header>
+            <h2>Lorem ipsum dolor</h2>
+        </header>
+
+        <h1>실시간 배포.... 완성되었나?</h1>
+        <!-- 로그인 기능 영역 -->
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-6">
+                    <a href="/posts/save" role="button" class="btn btn-primary">글 등록</a>
+                    {{#userName}}
+                        <span id="user">{{userName}} 님 환영합니다!</span>
+                        <!--스프링 시큐리티에서 기본적으로 제공하는 로그아웃 url(/logout) -->
+                        <a href="/logout" class="btn btn-info active" role="button">로그아웃</a>
+                    {{/userName}}
+                    {{^userName}}
+                        <!-- mustache에는 if else가 없는대신, ^를 사용하면 "~가 없을 경우" 를 나타낼 수 있다. -->
+                        <a href="/oauth2/authorization/google"
+                           class="btn btn-success active" role="button">Google login</a>
+                        <a href="/oauth2/authorization/naver"
+                           class="btn btn-success active" role="button">Naver login</a>
+                    {{/userName}}
+                </div>
+            </div>
+        </div><!--/.col-md-12 글 등록 버튼-->
+        <br/>
+
+        <!-- 게시글 목록 출력 -->
+        <table class="table table-horizontal table-bordered">
+            <thead class="thead-strong">
+            <tr>
+                <th>게시글 번호</th>
+                <th>제목</th>
+                <th>작성자</th>
+                <th>최종 수정일</th>
+            </tr>
+            </thead>
+
+            <tbody id="tbody">
+            {{#posts}} <!--#posts라는 List를 순회하는 mustache문법 , java의 for문과 비슷하다-->
+            <tr>
+                <td>{{id}}</td>
+                <td><a href="/posts/update/{{id}}">{{title}}</a></td>
+                <td>{{author}}</td>
+                <td>{{modifiedDate}}</td>
+            </tr>
+            {{/posts}}
+            </tbody>
+        </table>
+    </section>
+
+
+
+    <!-- 게시글 -->
+    <section class="main items">
+        <article class="item">
+            <header>
+                <a href="#"><img src="images/pic01.jpg" alt="" /></a>
+                <h3>CI와 CD의 차이점</h3>
+            </header>
+            <p>CI는 "개발자를 위한 지속적인 통합(Continuous Integration)" 을 의미합니다. CI를 성공적으로 구현할 경우, 애플리케이션에 대한 코드의 변경사항이 정기적으로 빌드 및 통합되어 여러 명의 개발자들이 동시 코드 작업을 할 때 발생할 수 있는 충돌 문제를 해결할 수 있습니다.</p>
+            <br/>
+            <p>CD는 "지속적인 서비스 제공(Continuous Deployment)" 를 의미합니다. CD를 성공적으로 구현할 경우 지속적인 통합환경에서 구현된 코드 통합 시스템을 자동화할 수 있습니다. </p>
+            <ul class="actions">
+                <li><a href="#" class="button">More</a></li>
+            </ul>
+        </article>
+        <article class="item">
+            <header>
+                <a href="#"><img src="images/pic02.jpg" alt="" /></a>
+                <h3>Blandit adipiscing</h3>
+            </header>
+            <p>Fusce malesuada efficitur venenatis. Pellentesque tempor leo sed massa hendrerit hendrerit. In sed feugiat est, eu congue elit. Ut porta magna vel felis sodales vulputate. Donec faucibus dapibus lacus non ornare.</p>
+            <ul class="actions">
+                <li><a href="#" class="button">More</a></li>
+            </ul>
+        </article>
+        <article class="item">
+            <header>
+                <a href="#"><img src="images/pic03.jpg" alt="" /></a>
+                <h3>Lorem massa nulla</h3>
+            </header>
+            <p>Fusce malesuada efficitur venenatis. Pellentesque tempor leo sed massa hendrerit hendrerit. In sed feugiat est, eu congue elit. Ut porta magna vel felis sodales vulputate. Donec faucibus dapibus lacus non ornare.</p>
+            <ul class="actions">
+                <li><a href="#" class="button">More</a></li>
+            </ul>
+        </article>
+        <article class="item">
+            <header>
+                <a href="#"><img src="images/pic04.jpg" alt="" /></a>
+                <h3>Ipsum sed tempus</h3>
+            </header>
+            <p>Fusce malesuada efficitur venenatis. Pellentesque tempor leo sed massa hendrerit hendrerit. In sed feugiat est, eu congue elit. Ut porta magna vel felis sodales vulputate. Donec faucibus dapibus lacus non ornare.</p>
+            <ul class="actions">
+                <li><a href="#" class="button">More</a></li>
+            </ul>
+        </article>
+    </section>
+
+    <!-- CTA -->
+    <section id="cta" class="main special">
+        <h2>Etiam veroeros lorem</h2>
+        <p>Phasellus ac augue ac magna auctor tempus proin<br />
+            accumsan lacus a nibh commodo in pellentesque dui<br />
+            in hac habitasse platea dictumst.</p>
+        <ul class="actions">
+            <li><a href="#" class="button big">Get Started</a></li>
+        </ul>
+    </section>
+
+
+
+
+
+</div>
+
+{{>layout/real-footer}}
