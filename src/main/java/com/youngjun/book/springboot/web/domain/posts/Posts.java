@@ -24,7 +24,7 @@ public class Posts extends BaseTimeEntity { //실제 DB 테이블과 매칭될 �
 
     private String author;
 
-    @Column(nullable = false)
+    @Column
     private Integer bgNum;
 
     @Builder

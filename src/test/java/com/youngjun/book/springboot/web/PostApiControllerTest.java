@@ -109,13 +109,12 @@ public class PostApiControllerTest {
         //given
         String title = "제목입니다";
         String content = "내용입니다";
-        Integer bgNum = 1;
 
         PostSaveRequestDto requestDto = PostSaveRequestDto.builder()
                 .title(title)
                 .content(content)
                 .author("작성자!")
-                .bgNum(bgNum).build();
+                .build();
 
         String url = "http://localhost:" + port + "/api/v1/posts";
 
