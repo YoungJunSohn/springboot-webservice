@@ -29,7 +29,7 @@ public class PostsListResponseDto {
 
         //랜덤카드 배경 이미지를 위한 이미지 숫자(1~10)
         if(entity.getBgNum()<10){
-            this.bgNum = "0"+entity.getBgNum();
+            this.bgNum = "0"+entity.getBgNum().toString();
         }else if(entity.getBgNum()==10){
             this.bgNum = ""+entity.getBgNum();
         }
