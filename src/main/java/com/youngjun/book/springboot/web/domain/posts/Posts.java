@@ -32,8 +32,8 @@ public class Posts extends BaseTimeEntity { //실제 DB 테이블과 매칭될 �
         this.title = title;
         this.content = content;
         this.author = author;
-//        this.bgNum = (int)Math.floor(Math.random()*10+1);
-        this.bgNum = bgNum;
+        this.bgNum = (int)Math.floor(Math.random()*10+1);
+//        this.bgNum = bgNum;
     }//Posts
 
 
