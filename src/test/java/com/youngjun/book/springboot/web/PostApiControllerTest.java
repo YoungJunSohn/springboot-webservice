@@ -67,11 +67,13 @@ public class PostApiControllerTest {
         Posts savedPosts = postRepository.save(Posts.builder()
                 .title("제목1!")
                 .content("내용쓰1!")
-                .author("글쓴이1").build());
+                .author("글쓴이1")
+                .bgNum(2).build());
 
         Long updateId = savedPosts.getId();
         String expectedTitle = "title2"; //바꿀 제목
         String expectedContent = "content2"; // 바꿀 내용
+        String expectedBgNum = "2";
 
         PostsUpdateRequestDto requestDto = PostsUpdateRequestDto.builder()
                 .title(expectedTitle)
@@ -107,11 +109,13 @@ public class PostApiControllerTest {
         //given
         String title = "제목입니다";
         String content = "내용입니다";
+        Integer bgNum = 1;
 
         PostSaveRequestDto requestDto = PostSaveRequestDto.builder()
                 .title(title)
                 .content(content)
-                .author("작성자!").build();
+                .author("작성자!")
+                .bgNum(bgNum).build();
 
         String url = "http://localhost:" + port + "/api/v1/posts";
 
