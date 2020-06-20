@@ -18,7 +18,8 @@ var index = {
         var data = {
             title: $('#title').val(),
             author: $('#author').val(),
-            content: $('#content').val()
+            content: $('#content').val(),
+            bgNum:Math.floor(Math.random()*10+1) //1~10까지의 숫자를 함께 보냄
         };
 
         $.ajax({
