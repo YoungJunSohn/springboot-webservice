@@ -1,0 +1,88 @@
+.contact-w3{
+    margin: 4em auto 0;
+    width: 30%;
+    -webkit-appearance: none;
+    background-color: rgba(7, 6, 11, 0.63);
+    padding: 2em;
+    border-radius:3px;
+}
+.contact-w3 input[type="text"], .contact-w3 textarea {
+    width: 96%;
+    padding: 0.7em;
+    background: #fff;
+    color: #000;
+    border: none;
+    outline: none;
+    font-size: 0.95em;
+    border-top: 3px solid #17b978;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -o-border-radius: 3px;
+    font-family: 'Open Sans', sans-serif;
+}
+.row {
+    margin: 0.8em 0;
+}
+.row1 {
+    margin-top: 0.8em;
+}
+.contact-left-w3 {
+    float: left;
+    width: 45%;
+    margin-right: 5%;
+}
+.contact-right-w3l {
+    float: left;
+    width: 48%;
+}
+.contact-w3 textarea {
+    resize: none;
+    height: 150px;
+}
+.contact-w3 label {
+    font-size: 0.95em !important;
+    color: #fff !important;
+    margin-bottom: 8px;
+    display: block;
+    font-weight: 600;
+}
+.contact-w3 input[type="submit"] {
+    font-size: 1em;
+    padding: 0.8em;
+    display: block;
+    margin-top: 1em;
+    outline: none;
+    background: #17b978;
+    color: #fff;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -o-border-radius: 3px;
+    font-family: 'Open Sans', sans-serif;
+}
+.contact-w3 input[type="submit"]:hover{
+    background: #fff;
+    color:#000;
+}
+.footer-w3-agile {
+    text-align: center;
+    padding: 4em 0;
+}
+.footer-w3-agile p {
+    font-size: .9em;
+    color: #fff;
+    margin: 0px;
+    line-height:1.8em
+}
+.footer-w3-agile p a {
+    color: #fff;
+}

@@ -24,11 +24,16 @@ public class Posts extends BaseTimeEntity { //실제 DB 테이블과 매칭될 �
 
     private String author;
 
+    @Column
+    private Integer bgNum;
+
     @Builder
-    public Posts(String title, String content, String author){
+    public Posts(String title, String content, String author, Integer bgNum){
         this.title = title;
         this.content = content;
         this.author = author;
+        this.bgNum = (int)Math.floor(Math.random()*10+1);
+//        this.bgNum = bgNum;
     }//Posts
 
 

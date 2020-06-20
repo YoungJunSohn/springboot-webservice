@@ -1,10 +1,13 @@
 package com.youngjun.book.springboot.web;
 
-import com.youngjun.book.springboot.web.HelloController;
+import com.youngjun.book.springboot.config.auth.SecurityConfig;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.FilterType;
+import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 
@@ -16,13 +19,18 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 
 @RunWith(SpringRunner.class) //스프링부트와 Junit 사이에 연결자 역할
-@WebMvcTest(controllers = HelloController.class)
+@WebMvcTest(controllers = HelloController.class,
+                excludeFilters = {
+                @ComponentScan.Filter(type = FilterType.ASSIGNABLE_TYPE
+                        , classes = SecurityConfig.class)
+                })
 public class HelloControllerTest {
 
     @Autowired //빈 와이어링
     private MockMvc mvc; //mock 객체 생성
 
     @Test
+    @WithMockUser(roles="USER")
     public void helloDTOTest() throws Exception{
         String name = "테스트입니다";
         int amount = 2222;
@@ -43,6 +51,7 @@ public class HelloControllerTest {
     }//helloDTOTest()
 
     @Test
+    @WithMockUser(roles="USER")
     public void helloTest() throws Exception{
         String hello = "hello";
 
