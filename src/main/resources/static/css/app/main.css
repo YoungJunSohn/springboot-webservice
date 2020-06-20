@@ -1334,7 +1334,7 @@ a.breadcrumb-item:hover {
 
 
 /*---------------------------------------------*/
-.bg-img1 {
+.ㄴbg-img1 {
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1733,8 +1733,8 @@ a.breadcrumb-item:hover {
 }
 #plz-login{
     width:500px;
-    margin-top:50px;
-    margin-left:37%;
+    padding-top:50px;
+    margin:auto;
     text-align: center;
     font-size: 35px;
     /*background-color: #00b5e9;*/
