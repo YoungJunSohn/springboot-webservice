@@ -18,7 +18,7 @@ public class PostSaveRequestDto {
         this.title = title;
         this.content = content;
         this.author = author;
-        this.bgNum = null;
+        this.bgNum = bgNum;
     }//PostSaveRequestDto
 
     public Posts toEntity(){
