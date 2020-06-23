@@ -48,14 +48,21 @@ public class IndexController {
 
     //글 등록 화면으로
     @GetMapping("/posts/save")
-    public String postsSave(){
+    public String postsSave(@LoginUser SessionUser user, Model model){
+        if(user != null){
+            model.addAttribute("userName", user.getName());//작성자를 위해 유저네임 넘김
+        }//if
         return "posts-save";
     }//postsSave
 
     @GetMapping("/posts/update/{id}")
-    public String postsUpdate(@PathVariable Long id, Model model){
+    public String postsUpdate(@PathVariable Long id, Model model, @LoginUser SessionUser user){
         PostsResponseDto dto = postService.findById(id); //id로
         model.addAttribute("post", dto);
+
+        if(user != null){
+            model.addAttribute("userName", user.getName());
+        }//if
         return "posts-update";
     }//postsUpdate
 
