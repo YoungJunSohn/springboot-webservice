@@ -11,7 +11,9 @@
 <br/>
 
 ---
-> 개발 환경
+> 개발 환경 및 인프라
+
+<img src="/src/main/resources/static/images/git/develop-infra.png">
 
 * IDE : IntelliJ Ultimate
 * Build tool : Gradle 4
@@ -70,7 +72,8 @@
 <br/><br/><br/>
 
 ---
->   많은 서비스업체에서 이용하고 있는 인프라를 직접 구축해보기 위해 시작하였습니다.
+>   많은 서비스업체에서 이용하고 있는 인프라를 직접 구축해보기 위해 시작하였습니다.<br/>
+>
 >   실제 서비스 환경에서 사용되는 AWS, CI(Continuous Integration) 등을 직접 구현해보고 구조가 어떠한지 경험할 수 있었습니다.
 
 
