@@ -4,6 +4,7 @@
 
 > SpringBoot와 AmazonWebService를 이용하여 웹 서비스 구축
 
+click to go [TuningHour](http://ec2-13-209-238-146.ap-northeast-2.compute.amazonaws.com:8080)
 
 <br/>
 <br/>
