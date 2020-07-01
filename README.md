@@ -1,4 +1,3 @@
-# visit [TuningHour]("http://ec2-13-209-238-146.ap-northeast-2.compute.amazonaws.com:8080")
 <a href="http://ec2-13-209-238-146.ap-northeast-2.compute.amazonaws.com:8080">
 <img src="/src/main/resources/static/images/app/logo-github.png">
 </a>
