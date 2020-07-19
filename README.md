@@ -46,6 +46,9 @@ click to go [TuningHour](http://ec2-13-209-238-146.ap-northeast-2.compute.amazon
  
 * Travis CI (지속적 배포)
 
+* Git (버전 관리)
+- Git flow 방식을 채용하여 버전의 분산 관리, 목적에 따른 Branch 분리 개발
+
 * Nginx (무중단 배포 - **개발 예정**)
   * 구상 : port를 두 개로 나누고, 하나의 엔진엑스로 두 개의 스프링부트 jar를 사용하여 스위칭되는 방식
   - 최초 실행시, 엔진엑스가 8081port에서 스프링부트를 실행하고 유저의 요청을 처리, 8082port는 중단 및 휴식
